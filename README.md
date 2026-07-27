@@ -1,6 +1,6 @@
 # Learntrack
 
-A Java-based application for managing students, trainers, courses, and enrollments.
+A Java-based console-based application for managing students, trainers, courses, and enrollments.
 
 ## Features
 * **Entity Management:** Core classes for `Student`, `Course`, `Trainer`, and `Enrollment`.
@@ -19,6 +19,6 @@ src/com/airtribe/learntrack/
 ```
 
 ## Setup & Execution
-1. Ensure you have JDK 21 installed.
+1. Ensure you have JDK installed.
 2. Mark the `src` directory as the "Sources Root" in your IDE.
 3. Run the `Main.java` file located in the `ui` package to start the application.

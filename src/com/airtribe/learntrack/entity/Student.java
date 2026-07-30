@@ -6,7 +6,7 @@ public class Student extends Person {
     private boolean active;
 
     // Default constructor
-    public Student(String id, String firstName, String lastName, String email, String batch, boolean active) {
+    public Student(int id, String firstName, String lastName, String email, String batch, boolean active) {
         super(id, firstName, lastName, email);
         this.batch = batch;
         this.active = active;

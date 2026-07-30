@@ -1,12 +1,12 @@
 package com.airtribe.learntrack.entity;
 
 public class Person {
-    private String id;
+    private int id;
     private String firstName;
     private String lastName;
     private String email;
 
-    public Person(String id, String firstName, String lastName, String email) {
+    public Person(int id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,8 +19,8 @@ public class Person {
     }
 
     // Getters and Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }

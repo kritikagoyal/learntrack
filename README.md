@@ -5,7 +5,7 @@ A Java-based console-based application for managing students, trainers, courses,
 ## Features
 * **Entity Management:** Core classes for `Student`, `Course`, `Trainer`, and `Enrollment`.
 * **Object-Oriented Design:** Demonstrates encapsulation, inheritance (via a base `Person` class), constructor overloading, and polymorphism.
-* **Structured Packages:** Follows standard Java package conventions (`entity`, `service`, `ui`, `exception`, `util`).
+* **Structured Packages:** Follows standard Java package conventions (`entity`, `service`, `ui`, `exception`, `com.airtribe.learntrack.util`).
 
 ## Project Structure
 ```text
@@ -15,7 +15,7 @@ src/com/airtribe/learntrack/
  ├── exception/     # Custom exception handling
  ├── service/       # Business logic layer
  ├── ui/            # Console UI (Main.java)
- └── util/          # Helper classes
+ └── com.airtribe.learntrack.util/          # Helper classes
 ```
 
 ## Setup & Execution

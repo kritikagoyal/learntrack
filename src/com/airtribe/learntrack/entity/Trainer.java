@@ -4,7 +4,7 @@ public class Trainer extends Person {
 
     private String specialization;
 
-    public Trainer(String id, String firstName, String lastName, String email, String specialization) {
+    public Trainer(int id, String firstName, String lastName, String email, String specialization) {
         super(id, firstName, lastName, email);
         this.specialization = specialization;
     }

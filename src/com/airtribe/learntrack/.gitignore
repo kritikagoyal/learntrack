@@ -1,0 +1,7 @@
+# Compiled Java bytecode
+*.class
+
+# IDE and build folders
+out/
+.idea/
+*.iml

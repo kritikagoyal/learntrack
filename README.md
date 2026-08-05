@@ -29,3 +29,42 @@ src/com/airtribe/learntrack/
  ├── ui/            # Menu-driven console interface (Main.java)
  └── util/          # Static utilities (IdGenerator)
 ```
+
+## Class Diagram
+```mermaid
+classDiagram
+    class Person {
+        -String firstName
+        -String lastName
+        -String email
+        -int id
+    }
+    class Student {
+        -String batch
+        -boolean active
+    }
+    class Trainer {
+        -String specialization
+    }
+    Person <|-- Student
+    Person <|-- Trainer
+
+    class Course {
+        -int id
+        -String courseName
+        -String description
+        -int duration
+        -boolean active
+    }
+    
+    class Enrollment {
+        -String id
+        -String studentId
+        -String courseId
+        -String status
+    }
+    
+    class IdGenerator {
+        +getNextCourseId() int
+        +getNextStudentId() int
+    }

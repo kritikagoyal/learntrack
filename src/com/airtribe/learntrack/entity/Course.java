@@ -1,7 +1,7 @@
 package com.airtribe.learntrack.entity;
 
 public class Course {
-    private String id;
+    private int id;
     private String courseName;
     private String description;
     private int durationInWeeks;
@@ -11,7 +11,7 @@ public class Course {
     public Course() {}
 
     // Parameterized Constructor
-    public Course(String id, String courseName, String description, int durationInWeeks, boolean active) {
+    public Course(int id, String courseName, String description, int durationInWeeks, boolean active) {
         this.id = id;
         this.courseName = courseName;
         this.description = description;
@@ -20,8 +20,8 @@ public class Course {
     }
 
     // Getters and Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
     public String getCourseName() { return courseName; }
     public void setCourseName(String courseName) { this.courseName = courseName; }

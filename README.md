@@ -1,24 +1,31 @@
-# Learntrack
+# LearnTrack
 
-A Java-based console-based application for managing students, trainers, courses, and enrollments.
+## Project Description
+LearnTrack is a Java-based console application designed to manage students, courses, and enrollments. The system uses a menu-driven interface and is built entirely on robust Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, and polymorphism.
 
-## Features
-* **Entity Management:** Core classes for `Student`, `Course`, `Trainer`, and `Enrollment`.
-* **Object-Oriented Design:** Demonstrates encapsulation, inheritance (via a base `Person` class), constructor overloading, and polymorphism.
-* **Structured Packages:** Follows standard Java package conventions (`entity`, `service`, `ui`, `exception`, `com.airtribe.learntrack.util`).
+## Requirements
+* **Java Development Kit (JDK):** Version 21
+
+## Setup & Execution
+1. Open your terminal and navigate strictly to the `src` directory:
+   ```bash
+   cd path/to/learntrack/src
+   ```
+2. Compile the application:
+   ```bash
+   javac com/airtribe/learntrack/ui/Main.java
+   ```
+3. Run the application:
+   ```bash
+   java com.airtribe.learntrack.ui.Main
+   ```
 
 ## Project Structure
 ```text
 src/com/airtribe/learntrack/
- ├── docs/          # Documentation files
  ├── entity/        # Core models (Person, Student, Trainer, Course, Enrollment)
- ├── exception/     # Custom exception handling
+ ├── exception/     # Custom exception handling (EntityNotFoundException)
  ├── service/       # Business logic layer
- ├── ui/            # Console UI (Main.java)
- └── com.airtribe.learntrack.util/          # Helper classes
+ ├── ui/            # Menu-driven console interface (Main.java)
+ └── util/          # Static utilities (IdGenerator)
 ```
-
-## Setup & Execution
-1. Ensure you have JDK installed.
-2. Mark the `src` directory as the "Sources Root" in your IDE.
-3. Run the `Main.java` file located in the `ui` package to start the application.

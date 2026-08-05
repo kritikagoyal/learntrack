@@ -22,26 +22,26 @@ public class StudentService {
         int newId = IdGenerator.getNextStudentId();
         Student newStudent = new Student(newId, firstName, lastName, email, batch, true);
         students.add(newStudent);
-        System.out.println("Student added: " + newStudent.getFirstName());
+        System.out.println("Student added : " + newStudent.getDisplayName());
     }
 
-    public void removeStudent(Student student) {
-        students.remove(student);
-        System.out.println("Student removed : " + student.getDisplayName());
-    }
-
-    public void updateStudent(Student student, int id, String email) {
-        for (Student s : students) {
-            if (s.getId() == id) {
-                s.setEmail(email);
-                System.out.println("Student's email ID updated");
+    public void listStudents() {
+        System.out.println("--- Student List ---");
+        if (students.isEmpty()) {
+            System.out.println("No students added yet.");
+        } else {
+            for (Student student : students) {
+                System.out.println(student.getId() + " | " + student.getFirstName() + " " + student.getLastName() + " | Batch: " + student.getBatch());
             }
         }
     }
 
-    public void listStudents() {
-        for (Student s : students) {
-            System.out.println(s.getId() + " | " + s.getDisplayName() + " | Batch : " + s.getBatch());
-        }
+    public Student getStudentById(int id) {
+        return students.get(id);
+    }
+
+    public void deactivateStudent(int id) {
+        getStudentById(id).setActive(false);
+        System.out.println("Student with ID " + id + " has been deactivated.");
     }
 }

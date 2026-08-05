@@ -1,8 +1,9 @@
 package com.airtribe.learntrack.ui;
 
-import com.airtribe.learntrack.service.StudentService;
+import com.airtribe.learntrack.exception.EntityNotFoundException;
 import com.airtribe.learntrack.service.CourseService;
 import com.airtribe.learntrack.service.EnrollmentService;
+import com.airtribe.learntrack.service.StudentService;
 
 import java.util.Scanner;
 
@@ -70,13 +71,11 @@ public class Main {
                 break;
             case "3":
                 System.out.print("Enter Student ID: ");
-                // Ensure you implement getStudentById in StudentService
-                // studentService.getStudentById(scanner.nextLine());
+                studentService.getStudentById(Integer.parseInt(scanner.nextLine()));
                 break;
             case "4":
                 System.out.print("Enter Student ID to deactivate: ");
-                // Ensure you implement deactivateStudent in StudentService
-                // studentService.deactivateStudent(scanner.nextLine());
+                studentService.deactivateStudent(Integer.parseInt(scanner.nextLine()));
                 break;
             default:
                 System.out.println("Invalid input.");
@@ -100,17 +99,24 @@ public class Main {
                 System.out.print("Duration (weeks): ");
                 try {
                     int duration = Integer.parseInt(scanner.nextLine());
-                    // courseService.addCourse(name, desc, duration);
+                    courseService.addCourse(name, desc, duration);
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid duration. Must be a number.");
                 }
                 break;
             case "2":
-                // courseService.listCourses();
+                courseService.listCourses();
                 break;
             case "3":
                 System.out.print("Enter Course ID: ");
-                // courseService.toggleActivation(scanner.nextLine());
+                try {
+                    int id = Integer.parseInt(scanner.nextLine());
+                    courseService.toggleActivation(id);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. ID must be a number.");
+                } catch (EntityNotFoundException e) {
+                    System.out.println("Error: " + e.getMessage());
+                }
                 break;
             default:
                 System.out.println("Invalid input.");
@@ -131,18 +137,18 @@ public class Main {
                 String sId = scanner.nextLine();
                 System.out.print("Course ID: ");
                 String cId = scanner.nextLine();
-                // enrollmentService.enroll(sId, cId);
+                enrollmentService.enroll(sId, cId);
                 break;
             case "2":
                 System.out.print("Student ID: ");
-                // enrollmentService.viewEnrollments(scanner.nextLine());
+                enrollmentService.viewEnrollments(scanner.nextLine());
                 break;
             case "3":
                 System.out.print("Enrollment ID: ");
                 String eId = scanner.nextLine();
                 System.out.print("New Status (COMPLETED/CANCELLED): ");
                 String status = scanner.nextLine();
-                // enrollmentService.updateStatus(eId, status.toUpperCase());
+                enrollmentService.updateStatus(eId, status.toUpperCase());
                 break;
             default:
                 System.out.println("Invalid input.");

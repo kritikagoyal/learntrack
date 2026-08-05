@@ -1,5 +1,6 @@
 package com.airtribe.learntrack.entity;
 
+// base class
 public class Person {
     private int id;
     private String firstName;

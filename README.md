@@ -9,7 +9,7 @@ LearnTrack is a Java-based console application designed to manage students, cour
 ## Setup & Execution
 1. Open your terminal and navigate strictly to the `src` directory:
    ```bash
-   cd path/to/learntrack/src
+   cd path/to/learntrack/src 
    ```
 2. Compile the application:
    ```bash
